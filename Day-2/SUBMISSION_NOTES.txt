@@ -1,0 +1,27 @@
+DAY 02 — Submission Notes
+
+Files:
+- index.html
+- style.css
+- script.js
+- reflection_and_knowledge_check.txt
+
+Required evidence to capture in your own browser:
+1. Finished page screenshot showing your name and the click message.
+2. DevTools Console screenshot showing:
+   Page loaded successfully: Personal Profile page is ready.
+   and no unresolved JavaScript errors.
+3. DevTools Network screenshot after refreshing, showing index.html, style.css, and script.js.
+4. Temporarily rename style.css (for example to style-missing.css), refresh to show the styling breaks, then rename it back to style.css and refresh again.
+
+Suggested folder:
+tech-fellows-fullstack/
+└── day-02/
+    ├── index.html
+    ├── style.css
+    ├── script.js
+    └── reflection_and_knowledge_check.txt
+
+If your internship requires a GitHub repository, create:
+tech-fellows-fullstack/day-02
+and upload these files there.
