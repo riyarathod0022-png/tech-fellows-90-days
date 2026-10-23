@@ -1,0 +1,9 @@
+Semantic HTML uses meaningful tags such as header, nav, main, section, and footer to organize webpage content. 
+These tags make the structure easier for developers to understand and maintain. 
+They also help browsers and assistive technologies understand different parts of a webpage.
+The header usually contains introductory content, while the main element contains the primary content of the page. 
+A logical heading hierarchy helps users understand different topics and makes the page easier to navigate.
+The alt attribute provides a text description of an image. 
+Screen readers can read this description to users who cannot see the image. It is also useful when an image fails to load. 
+Meaningful alt text improves accessibility and helps users understand the purpose of an image. 
+Therefore, semantic HTML and appropriate alt text make websites more understandable, organized, and accessible.

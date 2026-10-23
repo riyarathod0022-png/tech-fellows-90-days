@@ -1,0 +1,40 @@
+1. What does semantic HTML mean?
+
+Semantic HTML means using meaningful HTML tags like "<header>", "<nav>", "<main>", and "<footer>" to organize webpage content.
+
+2. What is the difference between header and main?
+
+The "<header>" contains introductory content, while "<main>" contains the main content of the webpage.
+
+3. Why should a page use a logical heading hierarchy?
+
+A logical heading hierarchy makes content organized and easier to understand and navigate.
+
+4. What does href do?
+
+The "href" attribute specifies the destination of a link.
+
+5. How does href="#projects" work?
+
+It takes the user to the webpage section whose ID is "projects".
+
+6. When should you use ul rather than ol?
+
+Use "<ul>" for an unordered list with bullet points. Use "<ol>" when the order of items matters.
+
+7. What is the purpose of an image's alt attribute?
+
+The "alt" attribute provides alternative text describing an image for screen readers and when an image cannot load.
+
+8. Why is placeholder text not a replacement for a form label?
+
+Placeholder text disappears when the user types and may not be accessible enough. A label clearly identifies the purpose of a form field.
+
+9. What is the difference between section and a generic div?
+
+A "<section>" groups related content around a topic, while a "<div>" is a generic container without semantic meaning.
+
+10. Name two ways to make a page more accessible.
+
+1. Add meaningful alt text to images.
+2. Use proper heading levels and semantic HTML elements.
