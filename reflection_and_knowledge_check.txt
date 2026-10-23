@@ -1,0 +1,35 @@
+DAY 02 — Reflection
+
+HTML provides the structure and content of the personal profile page, including the heading, introduction, goals list, button, and message paragraph. CSS controls the presentation by adding the page background, readable typography, centered card, spacing, rounded corners, and button styling. JavaScript adds behavior by listening for the button click and displaying a message directly on the page. The JavaScript also uses console.log() to confirm that the page loaded successfully. One problem I checked was the connection between the HTML and CSS file; if the stylesheet filename is incorrect, the page loses its styling. I solved this by making sure the link uses the exact filename "style.css" and then refreshing the page to confirm the styles were restored.
+
+DAY 02 — Knowledge Check
+
+1. What is the difference between a code editor and a browser?
+A code editor is used to write and edit source code, while a browser runs and displays web pages.
+
+2. What does HTML provide?
+HTML provides the structure and content of a web page.
+
+3. Explain the difference between a CSS class selector and ID selector.
+A class selector starts with a dot (.) and can be reused on multiple elements. An ID selector starts with # and should identify one unique element on a page.
+
+4. What does JavaScript do in your page?
+JavaScript adds interactivity. In this page, it shows a message when the button is clicked and prints a page-loaded message in the Console.
+
+5. Why are CSS and JavaScript linked from HTML?
+CSS is linked so the page can be styled separately from its structure, and JavaScript is linked so behavior can be added separately from the HTML.
+
+6. What is the Console used for?
+The Console is used to view JavaScript messages, warnings, errors, and debugging information.
+
+7. What can the Network tab show?
+The Network tab shows requests made by the page and whether resources such as HTML, CSS, and JavaScript loaded successfully.
+
+8. What does a 404 commonly indicate?
+A 404 commonly means the requested resource or file was not found.
+
+9. Why save files before refreshing?
+Saving ensures the browser loads the latest version of the code instead of an older unsaved version.
+
+10. What does defer do in the script tag?
+defer tells the browser to download the JavaScript while parsing HTML and execute it after the HTML has been parsed.
