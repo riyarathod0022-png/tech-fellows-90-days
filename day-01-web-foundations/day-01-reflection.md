@@ -18,6 +18,5 @@ What I Will Do Differently Tomorrow
 
 I will practice HTML and check my code carefully before testing it.
 
-GitHub Repository
-
-I will add my GitHub repository link after uploading my work.
+GitHub Repository:
+https://github.com/riyarathod0022-png/tech-fellows-90-days
