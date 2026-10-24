@@ -3,64 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile Card</title>
+    <title>Riya Rathod | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <main class="profile-card">
+    <nav class="navbar">
+        <h2 class="logo">Riya<span>.</span></h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <div class="profile-cover">
-            <span class="profile-label">MY PROFILE</span>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+            <h1>Hi, I'm <span>Riya Rathod</span></h1>
+            <h3>Aspiring Web Developer</h3>
+            <p>I enjoy learning new technologies and creating beautiful, user-friendly websites.</p>
+            <a href="#about" class="btn">Explore My Portfolio</a>
         </div>
+    </section>
 
-        <div class="profile-content">
-
-            <img src="RIYA.jpeg" alt="Riya Rathod's profile photo" class="profile-image">
-
-            <h1>Riya Rathod</h1>
-
-            <p class="role">Aspiring Web Developer</p>
-
-            <p class="intro">
-                Hello! I am a BCA student who enjoys learning web development
-                and creating attractive, user-friendly websites.
-            </p>
-
-            <div class="info-section">
-                <h2>My Skills</h2>
-                <div class="tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>React</span>
-                </div>
-            </div>
-
-            <div class="info-section hobbies">
-                <h2>My Hobbies</h2>
-                <p>🎨 Designing &nbsp; 💻 Coding &nbsp; 🎵 Music</p>
-            </div>
-
-            <a href="#profile-details" class="profile-button">
-                View Profile →
-            </a>
-
-            <div id="profile-details" class="profile-details">
-                <h2>About Me</h2>
-                <p>
-                    I am continuously improving my technical skills
-                    and exploring new technologies to grow as a developer.
-                </p>
-            </div>
-
+    <section id="about" class="section about">
+        <h2>About <span>Me</span></h2>
+        <div class="about-box">
+            <p>Hello! I am a BCA student passionate about web development and technology.
+            I enjoy designing websites, learning programming languages, and improving
+            my technical skills. My goal is to become a skilled web developer.</p>
         </div>
+    </section>
 
-        <footer class="card-footer">
-            Designed with care · 2026
-        </footer>
+    <section id="skills" class="section skills">
+        <h2>My <span>Skills</span></h2>
+        <p class="section-description">Technologies I am learning and working with.</p>
 
-    </main>
+        <div class="skills-container">
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">React</div>
+            <div class="skill-card">PHP</div>
+            <div class="skill-card">SQL</div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <h2>Contact <span>Me</span></h2>
+        <p>Have a project idea or want to connect? Feel free to contact me.</p>
+        <a href="mailto:riya@example.com" class="btn">Send Me an Email</a>
+    </section>
+
+    <footer>
+        <p>© 2026 Riya Rathod | Personal Portfolio</p>
+        <p>Designed with care and creativity.</p>
+    </footer>
 
 </body>
 </html>
