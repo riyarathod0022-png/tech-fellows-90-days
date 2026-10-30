@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Demo | Tech Fellows</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6fb;
+            color: #263449;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #23395d;
+            color: white;
+            text-align: center;
+            padding: 28px 16px;
+        }
+
+        header p {
+            margin-top: 6px;
+            color: #e0e8f5;
+        }
+
+        main {
+            width: 100%;
+            max-width: 760px;
+            margin: 30px auto;
+            padding: 0 16px;
+            flex: 1;
+        }
+
+        .form-card {
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 5px 22px rgba(35, 57, 93, 0.10);
+        }
+
+        h2 {
+            color: #23395d;
+            margin-bottom: 8px;
+        }
+
+        .notice {
+            background: #eaf3ff;
+            border-left: 4px solid #3974c6;
+            padding: 12px;
+            margin: 18px 0 24px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label,
+        legend {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd3df;
+            border-radius: 7px;
+            font: inherit;
+            background: #fff;
+            color: #263449;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 2px solid #3974c6;
+            outline-offset: 2px;
+            border-color: #3974c6;
+        }
+
+        fieldset {
+            border: 1px solid #cbd3df;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        fieldset label {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-weight: normal;
+            margin: 10px 0 0;
+            cursor: pointer;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: 17px;
+            height: 17px;
+            accent-color: #3974c6;
+            flex-shrink: 0;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .checkbox-group label {
+            font-weight: normal;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 22px;
+            border: none;
+            border-radius: 7px;
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            background: #23395d;
+            color: white;
+        }
+
+        .submit-btn:hover {
+            background: #182a46;
+        }
+
+        .reset-btn {
+            background: #e8edf5;
+            color: #263449;
+        }
+
+        .reset-btn:hover {
+            background: #d8e0ec;
+        }
+
+        .form-message {
+            margin-top: 18px;
+            color: #17633a;
+            font-weight: 600;
+        }
+
+        footer {
+            background: #23395d;
+            color: white;
+            text-align: center;
+            padding: 18px 12px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 480px) {
+            .form-card {
+                padding: 20px 16px;
+            }
+
+            header {
+                padding: 22px 12px;
+            }
+
+            main {
+                margin: 20px auto;
+            }
+
+            .button-group button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Registration Demo</h1>
+        <p>Tech Fellows | HTML Forms &amp; Inputs</p>
+    </header>
+
+    <main>
+        <section class="form-card">
+            <h2>Registration Form</h2>
+            <p>Enter fictional details to practise HTML form validation.</p>
+
+            <div class="notice">
+                <strong>Practice only:</strong>
+                This demo does not save or send your registration details.
+                Do not enter real sensitive information.
+            </div>
+
+            <form id="registration-form" action="#" method="get">
+
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="fullName"
+                        minlength="2"
+                        maxlength="60"
+                        placeholder="Enter a fictional name"
+                        autocomplete="off"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="student@example.com"
+                        autocomplete="off"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input
+                        type="number"
+                        id="age"
+                        name="age"
+                        min="16"
+                        max="100"
+                        placeholder="Enter age (16–100)"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Choose Course</label>
+                    <select id="course" name="course" required>
+                        <option value="">Choose a course</option>
+                        <option value="bca">BCA</option>
+                        <option value="mca">MCA</option>
+                        <option value="btech">B.Tech</option>
+                        <option value="bba">BBA</option>
+                    </select>
+                </div>
+
+                <fieldset>
+                    <legend>Study Mode</legend>
+
+                    <label for="online">
+                        <input
+                            type="radio"
+                            id="online"
+                            name="studyMode"
+                            value="online"
+                            required>
+                        Online
+                    </label>
+
+                    <label for="onsite">
+                        <input
+                            type="radio"
+                            id="onsite"
+                            name="studyMode"
+                            value="onsite">
+                        On-site
+                    </label>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="goals">Learning Goals</label>
+                    <textarea
+                        id="goals"
+                        name="goals"
+                        rows="4"
+                        maxlength="500"
+                        placeholder="Write what you want to learn..."
+                    ></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input
+                        type="checkbox"
+                        id="practice"
+                        name="practiceConfirmation"
+                        required>
+
+                    <label for="practice">
+                        I confirm that I am using fictional practice data only.
+                    </label>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="submit-btn">
+                        Submit Demo
+                    </button>
+
+                    <button type="reset" class="reset-btn">
+                        Reset Form
+                    </button>
+                </div>
+
+                <p id="form-message" class="form-message" role="status"
+                   aria-live="polite" hidden></p>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tech Fellows | Day 05 - HTML Forms &amp; Inputs</p>
+        <p>Created for learning and practice purposes only.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById("registration-form");
+        const message = document.getElementById("form-message");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            message.textContent =
+                "Demo submitted successfully! No data has been saved or sent.";
+            message.hidden = false;
+        });
+
+        form.addEventListener("reset", function () {
+            message.hidden = true;
+            message.textContent = "";
+        });
+    </script>
+
+</body>
+</html>
