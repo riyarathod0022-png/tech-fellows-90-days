@@ -1,0 +1,244 @@
+/* =====================================
+   DAY 09 - CHOCOLATE MOCHA AESTHETIC
+===================================== */
+
+/* Universal Box Model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Body Background */
+body {
+    margin: 0;
+    padding: 28px;
+    font-family: 'DM Sans', Arial, sans-serif;
+    background-color: #24150F;
+    color: #493629;
+    line-height: 1.8;
+}
+
+/* Header */
+.site-header {
+    text-align: center;
+    background: linear-gradient(135deg, #493024, #352219);
+    color: #F1DFCC;
+    padding: 38px 20px;
+    margin-bottom: 35px;
+    border: 1px solid #79583F;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Profile Logo */
+.profile-logo {
+    width: 78px;
+    height: 78px;
+    object-fit: cover;
+    border: 3px solid #D5B18A;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+/* Main Title */
+#page-title {
+    color: #E8C9A5;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.site-header p {
+    color: #D9C2AA;
+}
+
+/* Navigation */
+.navigation {
+    margin-top: 22px;
+}
+
+.navigation a {
+    display: inline-block;
+    color: #F0DDC8;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 9px 18px;
+    margin: 4px;
+    border: 1px solid #8B6A4D;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: #D6B38E;
+    color: #352219;
+}
+
+/* Element Selector */
+p {
+    font-size: 16px;
+    margin: 14px 0;
+}
+
+/* Main Content */
+main {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* Common Content Sections */
+.content-section {
+    margin: 28px 0;
+    padding: 28px;
+    background-color: #DCC1A5;
+    color: #493629;
+    border: 1px solid #A77D59;
+    border-radius: 18px;
+    transition: 0.3s ease;
+}
+
+/* Bonus Card Class */
+.card {
+    border-left: 6px solid #8B6040;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.22);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+}
+
+/* Individual Section Shades */
+#welcome {
+    background-color: #E3CBB2;
+}
+
+#interests {
+    background-color: #D6B895;
+}
+
+#learning {
+    background-color: #E8D5C0;
+}
+
+#background {
+    background-color: #E3CBB2;
+}
+
+#skills {
+    background-color: #D6B895;
+}
+
+#hobbies {
+    background-color: #E8D5C0;
+}
+
+#contact {
+    background-color: #DCC1A5;
+}
+
+#more {
+    background-color: #E3CBB2;
+}
+
+/* Section Headings */
+h2 {
+    color: #503522;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+/* Profile Image */
+.profile-image {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    margin: 22px auto;
+    padding: 5px;
+    background-color: #F1E3D3;
+    border: 3px solid #8B6040;
+    border-radius: 16px;
+    box-shadow: 0 7px 20px rgba(65,40,25,0.2);
+}
+
+/* Lists */
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Links */
+main a {
+    color: #70472D;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid #98704E;
+}
+
+main a:hover {
+    color: #352219;
+}
+
+/* Horizontal Lines */
+hr {
+    border: none;
+    border-top: 1px solid #74543D;
+    margin: 28px 0;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    background-color: #352219;
+    color: #E8C9A5;
+    padding: 23px;
+    margin-top: 35px;
+    border: 1px solid #79583F;
+    border-radius: 18px;
+}
+
+.site-footer p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .site-header {
+        padding: 25px 12px;
+    }
+
+    #page-title {
+        font-size: 28px;
+    }
+
+    .content-section {
+        padding: 19px;
+        margin: 20px 0;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .navigation a {
+        padding: 8px 10px;
+        margin: 3px;
+    }
+
+    .profile-image {
+        width: 160px;
+    }
+}
