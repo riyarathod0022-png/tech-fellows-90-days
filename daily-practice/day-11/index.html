@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 11 | CSS Cascade, Specificity & Colors</title>
+
+    <!-- Linking External CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <p class="day-label">TECH FELLOWS | DAY 11</p>
+        <h1>CSS Cascade, Specificity & Colors</h1>
+        <p class="header-description">
+            Exploring CSS inheritance, selectors, color formats and styling techniques.
+        </p>
+    </header>
+
+    <main class="container">
+
+        <!-- TASK 1: INHERITANCE -->
+        <section class="task-section">
+            <h2>Task 1: Inheritance</h2>
+            <p>This paragraph inherits the color and font family from the body element.</p>
+            <p>CSS inheritance helps maintain consistent styling across a webpage.</p>
+            <p>
+                Visit
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/inherit">
+                    CSS Documentation
+                </a>
+                to learn more about inheritance.
+            </p>
+
+            <ul>
+                <li>First inherited list item</li>
+                <li>Second inherited list item</li>
+                <li>Third inherited list item</li>
+            </ul>
+        </section>
+
+        <!-- TASK 2: SPECIFICITY BATTLE -->
+        <section class="task-section">
+            <h2>Task 2: Specificity Battle</h2>
+
+            <p id="msg" class="note">Hello! Which CSS color rule wins?</p>
+
+            <div class="result-note">
+                <strong>Experiment:</strong>
+                Compare element, class, ID and !important rules.
+            </div>
+        </section>
+
+        <!-- TASK 3: SOURCE ORDER -->
+        <section class="task-section">
+            <h2>Task 3: Source Order</h2>
+
+            <p>Two CSS rules target the same box. The later rule wins when specificity is equal.</p>
+
+            <div class="box">
+                Source Order Box
+            </div>
+        </section>
+
+        <!-- TASK 4: COLOR FORMATS -->
+        <section class="task-section">
+            <h2>Task 4: CSS Color Formats</h2>
+
+            <p>The following boxes demonstrate six different CSS color formats.</p>
+
+            <div class="color-grid">
+                <div class="format-box named-color">
+                    <span>Named</span>
+                    <small>blue</small>
+                </div>
+
+                <div class="format-box hex-color">
+                    <span>HEX</span>
+                    <small>#0000ff</small>
+                </div>
+
+                <div class="format-box short-hex-color">
+                    <span>3-digit HEX</span>
+                    <small>#00f</small>
+                </div>
+
+                <div class="format-box rgb-color">
+                    <span>RGB</span>
+                    <small>rgb(0, 0, 255)</small>
+                </div>
+
+                <div class="format-box rgba-color">
+                    <span>RGBA</span>
+                    <small>rgba(0, 0, 255, 0.5)</small>
+                </div>
+
+                <div class="format-box hsl-color">
+                    <span>HSL</span>
+                    <small>hsl(240, 100%, 50%)</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- TASK 5: HSL SHADES -->
+        <section class="task-section">
+            <h2>Task 5: HSL Shades</h2>
+
+            <p>Five shades of blue using different lightness values.</p>
+
+            <div class="shade-grid">
+                <div class="shade-box shade-20">20%</div>
+                <div class="shade-box shade-35">35%</div>
+                <div class="shade-box shade-50">50%</div>
+                <div class="shade-box shade-65">65%</div>
+                <div class="shade-box shade-80">80%</div>
+            </div>
+        </section>
+
+        <!-- TASK 6: TRANSPARENCY -->
+        <section class="task-section">
+            <h2>Task 6: Transparency</h2>
+
+            <p>Compare RGBA transparency with the opacity property.</p>
+
+            <div class="transparency-demo">
+
+                <div class="rgba-demo">
+                    <h3>RGBA Transparency</h3>
+                    <p>Only the background color is transparent. This text remains fully visible.</p>
+                </div>
+
+                <div class="opacity-demo">
+                    <h3>Opacity</h3>
+                    <p>The entire element, including its text, becomes transparent.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TASK 7: CSS VARIABLES -->
+        <section class="task-section">
+            <h2>Task 7: CSS Variables</h2>
+
+            <div class="variable-demo">
+                <h3>One Place, One Theme</h3>
+                <p>
+                    CSS variables allow us to reuse colors throughout the webpage.
+                    Change the primary variable to update the theme.
+                </p>
+
+                <button class="theme-button" type="button">
+                    Explore CSS Variables
+                </button>
+            </div>
+        </section>
+
+        <!-- TASK 8: DEBUG CHALLENGE -->
+        <section class="task-section">
+            <h2>Task 8: Debug Challenge</h2>
+
+            <p>Corrected HTML and CSS after identifying six mistakes.</p>
+
+            <div class="debug-demo">
+                <h3 id="title" class="highlight">Welcome</h3>
+                <p class="highlight">Course</p>
+            </div>
+
+            <div class="result-note">
+                <strong>Debugging Result:</strong>
+                All six CSS mistakes have been identified and corrected.
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>Created by Riya Rathod | Tech Fellows Day 11</p>
+        <p>Learning CSS One Step at a Time.</p>
+    </footer>
+
+</body>
+</html>
