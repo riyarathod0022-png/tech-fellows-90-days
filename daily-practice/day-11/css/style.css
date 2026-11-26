@@ -1,0 +1,597 @@
+/* ==================================================
+   TECH FELLOWS - DAY 11
+   Cascade, Specificity, Inheritance and Colors
+   Created by: Riya Rathod
+   ================================================== */
+
+
+/* ==================================================
+   TASK 7: CSS VARIABLES
+   ================================================== */
+
+:root {
+    --primary: #6558c9;
+    --accent: #ed8bb5;
+    --bg: #f5f3fc;
+    --text: #333333;
+}
+
+
+/* ==================================================
+   GENERAL STYLING
+   ================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--text);              /* Task 1 and 7: Inherited text color */
+    font-family: Arial, sans-serif;  /* Task 1: Inherited font family */
+    background-color: var(--bg);     /* Task 7: Background variable */
+
+    border: 5px solid #e5e0f5;       /* Task 1: Body border is not inherited */
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;                  /* Task 1: Link inherits paragraph color */
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 600;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 40px auto;
+}
+
+
+/* ==================================================
+   MAIN HEADER
+   ================================================== */
+
+.main-header {
+    text-align: center;
+    padding: 65px 20px;
+    color: white;
+
+    background: linear-gradient(
+        120deg,
+        #6558c9,
+        #8875d9,
+        #a995e7
+    );
+
+    border-radius: 0 0 35px 35px;
+}
+
+.main-header .day-label {
+    display: inline-block;
+    color: #ffe0ed;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+
+    padding: 8px 18px;
+    margin-bottom: 18px;
+
+    background-color: rgba(237, 139, 181, 0.20);
+    border: 1px solid rgba(255, 224, 237, 0.65);
+    border-radius: 30px;
+}
+
+.main-header h1 {
+    color: white;
+    font-size: clamp(28px, 5vw, 43px);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.main-header .header-description {
+    color: #ffe4ef;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    max-width: 650px;
+    margin: auto;
+}
+
+
+/* ==================================================
+   TASK SECTIONS
+   ================================================== */
+
+.task-section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 28px;
+
+    border: 1px solid #e9e5f5;
+    border-radius: 18px;
+
+    box-shadow: 0 5px 20px rgba(65, 55, 120, 0.07);
+}
+
+.task-section h2 {
+    color: #5548a6;
+    font-size: 23px;
+    font-weight: 800;
+
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+
+    border-bottom: 2px solid #eeeaf9;
+}
+
+.task-section > p {
+    margin-bottom: 12px;
+}
+
+.task-section ul {
+    padding-left: 25px;
+    margin-top: 12px;
+}
+
+.task-section li {
+    padding: 4px 0;
+}
+
+
+/* ==================================================
+   TASK 1: INHERITANCE
+   ================================================== */
+
+/* Paragraphs inherit the body's color.
+   The link also inherits its paragraph's color. */
+
+.task-section:first-of-type p {
+    color: inherit;
+}
+
+
+/* ==================================================
+   TASK 2: SPECIFICITY BATTLE
+   ================================================== */
+
+/* STEP 1:
+   p = RED, .note = BLUE, #msg = GREEN.
+   Expected result: GREEN.
+   Reason: ID has higher specificity than class and element. */
+
+p {
+    color: red;
+}
+
+.note {
+    color: blue;
+}
+
+#msg {
+    color: green;
+}
+
+/* STEP 2:
+   p.note has higher specificity than .note.
+   But #msg still has higher specificity.
+   Expected result: GREEN. */
+
+p.note {
+    color: purple;
+}
+
+/* STEP 3:
+   !important overrides the normal ID declaration.
+   Expected final result: BLUE. */
+
+.note {
+    color: blue !important;
+}
+
+.result-note {
+    background-color: #f1effc;
+    border-left: 4px solid var(--primary);
+
+    padding: 15px 18px;
+    margin-top: 18px;
+
+    border-radius: 8px;
+    color: #45405e;
+}
+
+
+/* ==================================================
+   TASK 3: SOURCE ORDER
+   ================================================== */
+
+/* First .box rule:
+   Background color is LIGHT BLUE. */
+
+.box {
+    width: 150px;
+    height: 150px;
+
+    background-color: #dbeafe;
+    color: #292943;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    font-weight: 700;
+
+    margin: 22px auto;
+    border-radius: 15px;
+}
+
+/* Second .box rule:
+   Same specificity, but this rule comes later.
+   Therefore ROYAL BLUE wins.
+
+   Swap the two background-color values to
+   observe how source order changes the result. */
+
+.box {
+    background-color: #6558c9;
+    color: white;
+}
+
+
+/* ==================================================
+   TASK 4: CSS COLOR FORMATS
+   ================================================== */
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 22px;
+}
+
+.format-box {
+    min-height: 125px;
+    padding: 14px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    color: white;
+    text-align: center;
+    font-weight: 800;
+
+    border-radius: 14px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.09);
+}
+
+.format-box span {
+    font-size: 15px;
+}
+
+.format-box small {
+    font-size: 12px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+/* Same blue color in six different formats. */
+
+.named-color {
+    background-color: blue;
+}
+
+.hex-color {
+    background-color: #0000ff;
+}
+
+.short-hex-color {
+    background-color: #00f;
+}
+
+.rgb-color {
+    background-color: rgb(0, 0, 255);
+}
+
+.rgba-color {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+.hsl-color {
+    background-color: hsl(240, 100%, 50%);
+}
+
+
+/* ==================================================
+   TASK 5: HSL SHADES
+   ================================================== */
+
+.shade-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.shade-box {
+    min-height: 115px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 800;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+}
+
+/* Same hue (210) and saturation (60%).
+   Only lightness changes. */
+
+.shade-20 {
+    background-color: hsl(210, 60%, 20%);
+    color: white;
+}
+
+.shade-35 {
+    background-color: hsl(210, 60%, 35%);
+    color: white;
+}
+
+.shade-50 {
+    background-color: hsl(210, 60%, 50%);
+    color: white;
+}
+
+.shade-65 {
+    background-color: hsl(210, 60%, 65%);
+    color: #17233a;
+}
+
+.shade-80 {
+    background-color: hsl(210, 60%, 80%);
+    color: #17233a;
+}
+
+
+/* ==================================================
+   TASK 6: TRANSPARENCY
+   ================================================== */
+
+.transparency-demo {
+    padding: 30px;
+    margin-top: 20px;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #6558c9,
+        #e28ab7,
+        #f0b66e
+    );
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.rgba-demo,
+.opacity-demo {
+    padding: 25px;
+    border-radius: 13px;
+
+    background-color: white;
+    color: #292943;
+}
+
+.rgba-demo {
+    /* RGBA makes only the background transparent.
+       Text remains fully visible. */
+
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.opacity-demo {
+    /* Opacity affects the complete element,
+       including its text and background. */
+
+    opacity: 0.5;
+}
+
+.rgba-demo h3,
+.opacity-demo h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+
+/* ==================================================
+   TASK 7: CSS VARIABLES
+   ================================================== */
+
+.variable-demo {
+    background-color: #f5f4fc;
+    padding: 26px;
+
+    border-radius: 15px;
+    border: 1px solid #e5e0f5;
+}
+
+.variable-demo h3 {
+    color: var(--primary);
+    font-size: 23px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.variable-demo p {
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+.theme-button {
+    background-color: var(--primary);
+    color: white;
+
+    padding: 13px 26px;
+
+    border: none;
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover changes the background to accent variable. */
+
+.theme-button:hover {
+    background-color: var(--accent);
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 14px rgba(101, 88, 201, 0.20);
+}
+
+
+/* ==================================================
+   TASK 8: DEBUG CHALLENGE
+   ================================================== */
+
+/* Mistake 1: Missing dot before highlight.
+   Correct selector: .highlight */
+
+.highlight {
+    /* Mistake 2: Invalid HEX #ffff0 corrected to #ffff00. */
+    background-color: #ffff00;
+
+    /* Mistake 3: 'colour' corrected to 'color'. */
+    color: darkblue;
+
+    /* Mistake 4: Missing semicolon after color declaration
+       corrected by adding ; before font-size. */
+    font-size: 20px;
+
+    padding: 8px 12px;
+    border-radius: 7px;
+}
+
+/* Mistake 5: RGB value 300 is out of range.
+   Corrected to 255. */
+
+#title {
+    color: rgb(255, 0, 0);
+
+    /* Mistake 6: 'centre' corrected to 'center'. */
+    text-align: center;
+
+    margin-bottom: 15px;
+}
+
+.debug-demo {
+    background-color: #faf9ff;
+    padding: 25px;
+
+    border: 1px dashed #c9c1eb;
+    border-radius: 12px;
+}
+
+
+/* ==================================================
+   RED DESCRIPTION TEXT STYLING
+   ================================================== */
+
+/* Keep the red color, but improve its typography.
+   Task 1 inheritance and Task 2 specificity
+   are intentionally kept separate. */
+
+.task-section:nth-of-type(n+3) > p {
+    color: #d34f78;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+    line-height: 1.7;
+
+    background-color: #fff3f7;
+    border-left: 3px solid #e58baa;
+
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+.main-footer {
+    text-align: center;
+    padding: 28px 15px;
+
+    background-color: #292943;
+    color: white;
+
+    margin-top: 40px;
+    font-size: 13px;
+}
+
+.main-footer p {
+    color: white;
+    margin: 4px 0;
+}
+
+
+/* ==================================================
+   RESPONSIVE DESIGN
+   ================================================== */
+
+@media (max-width: 700px) {
+
+    .main-header {
+        padding: 45px 18px;
+    }
+
+    .container {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .task-section {
+        padding: 22px 17px;
+    }
+
+    .task-section h2 {
+        font-size: 20px;
+    }
+
+    .color-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shade-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .transparency-demo {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .color-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
