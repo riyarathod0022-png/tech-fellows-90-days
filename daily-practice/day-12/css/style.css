@@ -1,0 +1,494 @@
+/* =========================================
+   DAY 12 - CSS TYPOGRAPHY
+   Tech Fellows | Riya Rathod
+========================================= */
+
+
+/* TASK 2: Google Fonts and CSS Variables */
+
+:root {
+    --font-heading: "Poppins", Arial, sans-serif;
+    --font-body: "Inter", "Segoe UI", sans-serif;
+
+    --primary-color: #245b78;
+    --secondary-color: #e8f1f7;
+    --accent-color: #d58b55;
+    --text-color: #263746;
+    --card-color: #ffffff;
+    --page-background: #f3f6f9;
+}
+
+
+/* TASK 8: DEBUG CHALLENGE - Seven Corrections
+   1. Added comma between Poppins and sans-serif.
+   2. Added px unit to font-size.
+   3. Changed line-height from 1.6px to 1.6.
+   4. Removed invalid px unit from font-weight.
+   5. Changed capital to capitalize.
+   6. Removed space between 1.2 and rem.
+   7. Added em unit to letter-spacing.
+*/
+
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 1rem; /* Corrected: 16px or 1rem */
+    line-height: 1.6; /* Corrected: unitless value */
+    color: var(--text-color);
+    background-color: var(--page-background);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1.2rem; /* Corrected: no space before rem */
+    letter-spacing: 0.02em;
+}
+
+
+/* HEADER */
+
+.page-header {
+    background: linear-gradient(135deg, #dceaf3, #f4e8dc);
+    text-align: center;
+    padding: 55px 20px;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.day-label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.intro {
+    font-size: 1rem;
+    color: #536574;
+    max-width: 65ch;
+    margin: 0 auto;
+}
+
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 1050px;
+    margin: 35px auto;
+}
+
+.section {
+    background-color: var(--card-color);
+    padding: 28px;
+    margin-bottom: 28px;
+    border-radius: 12px;
+    border: 1px solid #dce4eb;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #e5edf2;
+    padding-bottom: 10px;
+}
+
+.section-intro {
+    font-size: 0.95rem;
+    color: #657786;
+    margin-bottom: 20px;
+}
+
+.demo-card {
+    background-color: #f5f8fb;
+    padding: 22px;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+
+/* TASK 1: FONT STACKS */
+
+.font-sans {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    margin-bottom: 18px;
+}
+
+.font-serif {
+    font-family: Georgia, "Times New Roman", serif;
+    margin-bottom: 18px;
+}
+
+.font-mono {
+    font-family: "Consolas", "Courier New", monospace;
+}
+
+
+/* TASK 2: GOOGLE FONTS AND VARIABLES */
+
+.font-heading-demo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.font-body-demo {
+    font-family: var(--font-body);
+    font-weight: 400;
+}
+
+.small-note {
+    font-size: 0.875rem;
+    color: #687986;
+    margin-top: 12px;
+}
+
+
+/* TASK 3: FONT SIZE UNITS */
+
+.unit-demo {
+    background-color: #edf3f8;
+    padding: 22px;
+    border-radius: 10px;
+    font-size: 20px; /* Parent font size = 20px */
+}
+
+/* Expected: 1.5em = 1.5 x 20px = 30px */
+.em-text {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* Expected: 1.5rem = 1.5 x 16px = 24px */
+.rem-text {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Nested parent: 1.5em = 30px */
+.nested-parent {
+    font-size: 1.5em;
+    background-color: #dceaf3;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Nested child: 1.5em = 1.5 x 30px = 45px */
+.nested-text {
+    font-size: 1.5em;
+}
+
+
+/* TASK 4: TYPE SCALE AND READABILITY */
+
+/* Type scale uses rem units */
+.scale-h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section .scale-h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.scale-h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.scale-h4 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+/* Readability: body size 1rem, line-height 1.6 */
+.section p {
+    max-width: 65ch;
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+/* Correct line-height is 1.6, not 1.6px.
+   To test the mistake, temporarily apply line-height: 1.6px
+   in DevTools. Text lines will become extremely crowded.
+   Restore line-height: 1.6 afterwards.
+*/
+
+
+/* TASK 5: TEXT PROPERTIES */
+
+.typography-card {
+    background: linear-gradient(135deg, #f1e9e1, #f8f5f1);
+    padding: 28px;
+    border-radius: 12px;
+}
+
+.card-title {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 8px;
+}
+
+.card-subtitle {
+    font-style: italic;
+    text-align: center;
+    font-size: 1rem;
+    color: #7b6757;
+    margin-bottom: 20px;
+}
+
+/* Indent the first line of the paragraph */
+.indented-text {
+    text-indent: 2rem;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.weight-demo {
+    border-top: 1px solid #d4c6b9;
+    padding-top: 15px;
+}
+
+.weight-demo p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.weight-300 {
+    font-weight: 300;
+}
+
+.weight-400 {
+    font-weight: 400;
+}
+
+.weight-600 {
+    font-weight: 600;
+}
+
+.weight-700 {
+    font-weight: 700;
+}
+
+
+/* TASK 6: LINK STATES */
+
+/* Wrong order example (for learning only):
+   a:hover { color: orange; }
+   a:visited { color: purple; }
+
+   If both rules match a visited link during hover,
+   the later a:visited rule can override a:hover.
+*/
+
+/* Correct LVHA order:
+   Link -> Visited -> Hover -> Focus -> Active.
+   All these pseudo-class selectors have equal specificity,
+   so source order decides which matching rule wins.
+*/
+
+.link-demo a:link {
+    color: #245b78;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link-demo a:visited {
+    color: #79529b;
+}
+
+.link-demo a:hover {
+    color: #d06d37;
+    text-decoration: underline;
+}
+
+.link-demo a:focus {
+    outline: 2px solid #d58b55;
+    outline-offset: 4px;
+}
+
+.link-demo a:active {
+    color: #c0392b;
+}
+
+
+/* TASK 7: FORM TYPOGRAPHY */
+
+.demo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 550px;
+    padding: 22px;
+    background-color: #f5f8fb;
+    border-radius: 10px;
+}
+
+/* Form controls do not inherit body fonts by default.
+   font: inherit makes them use the parent's font settings. */
+
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
+
+.demo-form label {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.demo-form input,
+.demo-form textarea,
+.demo-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdcbd6;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: var(--text-color);
+}
+
+.demo-form input::placeholder,
+.demo-form textarea::placeholder {
+    color: #7b8791;
+    font-style: italic;
+}
+
+.demo-form input:focus,
+.demo-form textarea:focus,
+.demo-form select:focus {
+    outline: 2px solid #8db5cf;
+    border-color: var(--primary-color);
+}
+
+.demo-form button {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.demo-form button:hover {
+    background-color: #173e55;
+}
+
+
+/* TASK 8: DEBUG CHALLENGE - ALL 7 CORRECTIONS */
+
+.debug-card h3 {
+    font-family: "Poppins", sans-serif; /* Mistake 1: Added comma before sans-serif */
+    font-size: 1.5rem;
+    font-weight: 800; /* Mistake 4: Removed invalid px unit */
+    text-transform: capitalize; /* Mistake 5: Changed capital to capitalize */
+}
+
+.debug-card p {
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 1.2rem; /* Mistake 6: Removed space before rem */
+    line-height: 1.6; /* Mistake 3: Removed px from line-height */
+    letter-spacing: 2px; /* Mistake 7: Added px unit */
+}
+
+/* Mistake 2: Added px unit to font-size: 16px instead of 16 */
+
+.debug-note {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+
+/* FOOTER */
+
+.page-footer {
+    background-color: #214c63;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.page-footer p {
+    font-size: 0.875rem;
+    margin-bottom: 5px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+
+    .page-header {
+        padding: 35px 15px;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .section {
+        padding: 18px;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .unit-demo {
+        font-size: 20px;
+    }
+
+    .nested-text {
+        overflow-wrap: anywhere;
+    }
+}
