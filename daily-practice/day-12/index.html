@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 12 - CSS Typography</title>
+
+    <!-- Task 2: Google Fonts links must come before the CSS stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <p class="day-label">TECH FELLOWS | DAY 12</p>
+        <h1>CSS Typography</h1>
+        <p class="intro">Understanding fonts, text styling, units and readability in CSS.</p>
+    </header>
+
+    <main class="container">
+
+        <!-- TASK 1: Font Stacks -->
+        <section class="section">
+            <h2>Task 1: Font Stacks</h2>
+            <p class="section-intro">Comparing three different generic font families.</p>
+
+            <div class="demo-card">
+                <p class="font-sans">
+                    Sans-serif: This paragraph uses Arial and Segoe UI with a sans-serif fallback.
+                </p>
+
+                <p class="font-serif">
+                    Serif: This paragraph uses Georgia and Times New Roman with a serif fallback.
+                </p>
+
+                <p class="font-mono">
+                    Monospace: This paragraph uses Consolas and Courier New with a monospace fallback.
+                </p>
+            </div>
+        </section>
+
+        <!-- TASK 2: Google Fonts and Variables -->
+        <section class="section">
+            <h2>Task 2: Google Fonts and Variables</h2>
+            <div class="demo-card">
+                <h3 class="font-heading-demo">Poppins - Heading Font</h3>
+                <p class="font-body-demo">
+                    Inter is used as the body font to make paragraphs clean and easy to read.
+                </p>
+                <p class="small-note">
+                    Fonts are loaded from Google Fonts and applied using CSS variables.
+                </p>
+            </div>
+        </section>
+
+        <!-- TASK 3: Units -->
+        <section class="section">
+            <h2>Task 3: Font Size Units</h2>
+            <p class="section-intro">Understanding the difference between px, em and rem.</p>
+
+            <div class="unit-demo">
+                <p class="em-text">
+                    1.5em text: Expected size is 30px.
+                </p>
+
+                <p class="rem-text">
+                    1.5rem text: Expected size is 24px.
+                </p>
+
+                <div class="nested-parent">
+                    <p class="nested-text">
+                        Nested 1.5em text: Expected size is 45px.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TASK 4: Type Scale and Readability -->
+        <section class="section">
+            <h2>Task 4: Type Scale and Readability</h2>
+
+            <div class="demo-card">
+                <h1 class="scale-h1">Heading Level One</h1>
+                <h2 class="scale-h2">Heading Level Two</h2>
+                <h3 class="scale-h3">Heading Level Three</h3>
+                <h4 class="scale-h4">Heading Level Four</h4>
+
+                <p>
+                    Typography is an important part of web design. Good typography
+                    makes information easy to understand and improves the overall
+                    reading experience. Proper font sizes and spacing help users
+                    read content comfortably on different devices.
+                </p>
+
+                <p>
+                    Line height creates enough space between lines of text.
+                    A suitable line height makes paragraphs look organized and
+                    prevents text from appearing crowded. CSS rem units also help
+                    create consistent and scalable typography.
+                </p>
+
+                <p>
+                    Readability depends on font selection, contrast, alignment
+                    and line length. A well-designed webpage uses a clear visual
+                    hierarchy so visitors can easily understand headings,
+                    paragraphs and important information.
+                </p>
+            </div>
+        </section>
+
+        <!-- TASK 5: Text Properties -->
+        <section class="section">
+            <h2>Task 5: Text Properties</h2>
+
+            <div class="typography-card">
+                <h3 class="card-title">Typography Showcase</h3>
+                <p class="card-subtitle">Exploring different text properties</p>
+
+                <p class="indented-text">
+                    CSS text properties help designers control the appearance
+                    and presentation of text on a webpage.
+                </p>
+
+                <div class="weight-demo">
+                    <p class="weight-300">Font Weight 300 - Light</p>
+                    <p class="weight-400">Font Weight 400 - Regular</p>
+                    <p class="weight-600">Font Weight 600 - Semi Bold</p>
+                    <p class="weight-700">Font Weight 700 - Bold</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TASK 6: Link States -->
+        <section class="section">
+            <h2>Task 6: Link States</h2>
+            <p class="section-intro">Testing link states and the LVHA order.</p>
+
+            <div class="demo-card link-demo">
+                <a href="https://www.google.com">Google Website</a>
+                <a href="https://www.wikipedia.org">Wikipedia Website</a>
+                <a href="https://www.github.com">GitHub Website</a>
+
+                <p class="small-note">
+                    Link order: Link, Visited, Hover, Focus, Active.
+                    All selectors have equal specificity.
+                </p>
+            </div>
+        </section>
+
+        <!-- TASK 7: Form Typography -->
+        <section class="section">
+            <h2>Task 7: Form Typography</h2>
+
+            <form class="demo-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+
+                <label for="message">Your Message</label>
+                <textarea id="message" rows="4" placeholder="Write your message"></textarea>
+
+                <label for="subject">Choose Subject</label>
+                <select id="subject">
+                    <option value="">Select a subject</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                </select>
+
+                <button type="button">Submit</button>
+            </form>
+        </section>
+
+        <!-- TASK 8: Debug Challenge -->
+        <section class="section">
+            <h2>Task 8: Debug Challenge</h2>
+
+            <div class="demo-card debug-card">
+                <h3>Fixed CSS Mistakes</h3>
+                <p>
+                    This section demonstrates corrected CSS typography
+                    properties after identifying seven common mistakes.
+                </p>
+
+                <p class="debug-note">
+                    Check the CSS comments for all seven corrections.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="page-footer">
+        <p>Tech Fellows | 90-Day MERN Internship</p>
+        <p>Day 12 - CSS Typography | Riya Rathod</p>
+    </footer>
+
+</body>
+</html>
