@@ -1,0 +1,201 @@
+/* ===== COLOR THEME ===== */
+
+:root {
+    --primary: #2B1745;
+    --accent: #7545A3;
+    --bg: #F7F3FA;
+    --text: #30283A;
+    --error: #B42318;
+    --surface: #FFFFFF;
+    --border: #D8D0E1;
+    --muted: #5C5365;
+    --shadow: rgba(43, 23, 69, 0.12);
+    --focus-shadow: rgba(117, 69, 163, 0.18);
+}
+
+
+/* ===== GENERAL STYLING ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 16px;
+}
+
+
+/* ===== FORM CONTAINER ===== */
+
+.form-box {
+    width: 100%;
+    max-width: 480px;
+
+    background: var(--surface);
+    padding: 42px 38px;
+
+    border-radius: 18px;
+    border: 1px solid var(--border);
+
+    box-shadow: 0 12px 35px var(--shadow);
+}
+
+
+/* ===== FORM HEADER ===== */
+
+.form-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.subtitle {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    color: var(--primary);
+    font-size: 27px;
+    margin-bottom: 10px;
+
+    background: linear-gradient(
+        90deg,
+        var(--primary),
+        var(--accent)
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ===== FORM GROUPS ===== */
+
+.form-group {
+    margin-bottom: 23px;
+}
+
+label {
+    display: block;
+    color: var(--primary);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 9px;
+}
+
+.required {
+    color: var(--error);
+    font-weight: bold;
+}
+
+
+/* ===== INPUT FIELDS ===== */
+
+input {
+    width: 100%;
+    padding: 13px 15px;
+
+    border: 1px solid var(--border);
+    border-radius: 9px;
+
+    background: var(--surface);
+    color: var(--text);
+
+    font-size: 14px;
+    font-family: inherit;
+
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input::placeholder {
+    color: var(--muted);
+}
+
+input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--focus-shadow);
+}
+
+
+/* ===== HINT TEXT ===== */
+
+.hint {
+    display: block;
+
+    color: var(--muted);
+    font-size: 12px;
+
+    margin-top: 7px;
+    line-height: 1.5;
+}
+
+
+/* ===== REGISTER BUTTON ===== */
+
+button {
+    width: 100%;
+    padding: 14px;
+
+    background: var(--primary);
+    color: var(--surface);
+
+    border: none;
+    border-radius: 9px;
+
+    font-size: 15px;
+    font-weight: bold;
+    font-family: inherit;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px var(--focus-shadow);
+}
+
+button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 480px) {
+
+    .form-box {
+        padding: 32px 22px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+}
